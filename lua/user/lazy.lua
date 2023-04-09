@@ -49,11 +49,11 @@ local plugins = {
         'catppuccin/nvim',
         as = 'catppuccin'
     },
+    'gruvbox-community/gruvbox',
     ---PLugins---
     'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
     'theprimeagen/harpoon',
-    'gruvbox-community/gruvbox',
     'lewis6991/impatient.nvim',
     {
         'numToStr/Comment.nvim',
