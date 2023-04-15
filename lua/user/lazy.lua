@@ -49,6 +49,10 @@ local plugins = {
         'catppuccin/nvim',
         as = 'catppuccin'
     },
+    {
+        'rose-pine/neovim',
+        name = 'rose-pine'
+    },
     'gruvbox-community/gruvbox',
     ---PLugins---
     'nvim-lualine/lualine.nvim',
