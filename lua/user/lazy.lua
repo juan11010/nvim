@@ -20,6 +20,8 @@ local plugins = {
     },
     -- treesitter
     'nvim-treesitter/nvim-treesitter',
+    'nvim-treesitter/nvim-treesitter-context',
+
     -- LSP zero
     {
         'VonHeikemen/lsp-zero.nvim',
@@ -68,19 +70,6 @@ local plugins = {
     'tpope/vim-fugitive',
     'lukas-reineke/indent-blankline.nvim',
     'github/copilot.vim',
-    {
-        "utilyre/barbecue.nvim",
-        name = "barbecue",
-        version = "*",
-        dependencies = {
-            "SmiteshP/nvim-navic",
-            "nvim-tree/nvim-web-devicons", -- optional dependency
-        },
-        opts = {
-            exclude_filetypes = { "netrw" },
-            show_dirname = false,
-        },
-    }
 }
 
 local opts = {}
