@@ -55,7 +55,8 @@ local plugins = {
         'rose-pine/neovim',
         name = 'rose-pine'
     },
-    'gruvbox-community/gruvbox',
+    'morhetz/gruvbox',
+    'shaunsingh/nord.nvim',
     ---PLugins---
     'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
