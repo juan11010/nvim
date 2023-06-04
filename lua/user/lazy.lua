@@ -69,7 +69,6 @@ local plugins = {
         end
     },
     'tpope/vim-fugitive',
-    'lukas-reineke/indent-blankline.nvim',
     'github/copilot.vim',
 }
 
