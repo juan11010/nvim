@@ -57,6 +57,7 @@ local plugins = {
     },
     'morhetz/gruvbox',
     'shaunsingh/nord.nvim',
+    'navarasu/onedark.nvim',
     ---PLugins---
     'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
@@ -68,7 +69,6 @@ local plugins = {
             require('Comment').setup()
         end
     },
-    'tpope/vim-fugitive',
     'github/copilot.vim',
 }
 
