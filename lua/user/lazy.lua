@@ -47,10 +47,7 @@ local plugins = {
     },
     -- Themes
     'folke/tokyonight.nvim',
-    {
-        'catppuccin/nvim',
-        as = 'catppuccin'
-    },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     {
         'rose-pine/neovim',
         name = 'rose-pine'
@@ -67,6 +64,7 @@ local plugins = {
         },
     },
     'nvim-lualine/lualine.nvim',
+    'lukas-reineke/indent-blankline.nvim',
     'lewis6991/gitsigns.nvim',
     'theprimeagen/harpoon',
     'lewis6991/impatient.nvim',
