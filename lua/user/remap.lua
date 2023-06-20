@@ -5,7 +5,7 @@ local opts = { silent = true }
 
 vim.g.mapleader = " "
 
-keymap("n", "<leader>pv", vim.cmd.Ex, opts)
+keymap("n", "<leader>pv", ":NvimTreeToggle<CR>", opts)
 keymap("i", "jk", "<ESC>", opts)
 
 -- keymap("n", "<S-l>", ":bnext<CR>", opts)

@@ -1,8 +1,8 @@
-local colorscheme = "gruvbox"
+local colorscheme = "catppuccin"
 
-if colorscheme == "onedark" then
-    require('onedark').setup {
-        style = 'cool'
+if colorscheme == "catppuccin" then
+    require('catppuccin').setup {
+        flavour = 'mocha'
     }
 end
 

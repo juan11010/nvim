@@ -59,6 +59,13 @@ local plugins = {
     'shaunsingh/nord.nvim',
     'navarasu/onedark.nvim',
     ---PLugins---
+    {
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+    },
     'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
     'theprimeagen/harpoon',
