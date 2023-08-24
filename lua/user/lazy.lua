@@ -54,12 +54,15 @@ local plugins = {
 		opts = {},
 	},
 
-	---PLugins---
+	-- git
 	{
 		"lewis6991/gitsigns.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 		config = true,
 	},
+	"mbbill/undotree",
+
+	---PLugins---
 	"theprimeagen/harpoon",
 	"tpope/vim-fugitive",
 	"onsails/lspkind-nvim",
