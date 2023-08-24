@@ -5,24 +5,23 @@ vim.opt.mouse = "a"
 -- Tabs and indentention
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 2
 vim.opt.expandtab = true
-vim.opt.smartindent = true
 vim.opt.autoindent = true
 
-vim.opt.wrap = false
-vim.opt.smartcase = true
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
-vim.opt.hlsearch = true
-vim.opt.incsearch = true
+vim.opt.wrap = false -- line wrap
+vim.opt.smartcase = true -- search
+vim.opt.cursorline = true -- curosor line
+
+-- appearance
 vim.opt.termguicolors = true
-vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
+
+vim.opt.swapfile = false -- turn off swap files
+vim.opt.backup = false -- turn off backup files
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- undo files
+vim.opt.undofile = true -- turn on undo files
+vim.opt.incsearch = true -- incremental search
+vim.opt.scrolloff = 8 -- scroll offset
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
-vim.opt.colorcolumn = ""
-vim.opt.cursorline = true
-vim.opt.backspace = "indent,eol,start"
+vim.opt.backspace = "indent,eol,start" -- backspace
