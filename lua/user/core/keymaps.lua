@@ -32,5 +32,6 @@ keymap("n", "<leader>j", "<cmd>lprev<CR>zz")
 keymap("n", "<leader>d", [["_d"]])
 keymap("v", "<leader>d", [["_d"]])
 
--- undo tree
+-- undo tree and fugitive
 keymap("n", "<leader>u", vim.cmd.UndotreeToggle)
+keymap("n", "<leader>gs", vim.cmd.Git)

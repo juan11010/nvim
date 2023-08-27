@@ -8,14 +8,16 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 
-vim.opt.wrap = false -- line wrap
-vim.opt.smartcase = true -- search
-vim.opt.cursorline = true -- curosor line
+-- Search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- appearance
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 
+vim.opt.wrap = false -- line wrap
+vim.opt.cursorline = true -- curosor line
 vim.opt.swapfile = false -- turn off swap files
 vim.opt.backup = false -- turn off backup files
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- undo files

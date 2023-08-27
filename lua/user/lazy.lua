@@ -11,77 +11,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = {
-	--telescope
-	{
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.2",
-		dependencies = { "nvim-lua/plenary.nvim" },
-	},
-	-- treesitter
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-	},
-	"nvim-treesitter/nvim-treesitter-context",
-
-	-- LSP Support
-	"neovim/nvim-lspconfig",
-	"williamboman/mason.nvim",
-	"williamboman/mason-lspconfig.nvim",
-	{
-		"jose-elias-alvarez/null-ls.nvim",
-		event = { "BufReadPre", "BufNewFile" },
-	},
-
-	-- Autocompletion
-	"hrsh7th/nvim-cmp",
-	"hrsh7th/cmp-buffer",
-	"hrsh7th/cmp-path",
-	"saadparwaiz1/cmp_luasnip",
-	"hrsh7th/cmp-nvim-lsp",
-	"hrsh7th/cmp-nvim-lua",
-
-	-- Snippets
-	"L3MON4D3/LuaSnip",
-	"rafamadriz/friendly-snippets",
-
-	-- Theme
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-	},
-
-	-- git
-	{
-		"lewis6991/gitsigns.nvim",
-		event = { "BufReadPre", "BufNewFile" },
-		config = true,
-	},
-	"mbbill/undotree",
-
-	---PLugins---
-	"theprimeagen/harpoon",
-	"tpope/vim-fugitive",
-	"onsails/lspkind-nvim",
-	"tpope/vim-sleuth",
-	"github/copilot.vim",
-	{
-		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
-	},
-	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup()
-		end,
-	},
-}
-
-local opts = {}
-
-require("lazy").setup(plugins, opts)
+require("lazy").setup({ { import = "user.plugins" }, { import = "user.plugins.lsp" },}, {
+  install = {
+    colorscheme = { "tokyonight" },
+  }, 
+  change_detection = {
+    notify = false,
+  },
+})
