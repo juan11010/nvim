@@ -11,11 +11,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ { import = "user.plugins" }, { import = "user.plugins.lsp" },}, {
-  install = {
-    colorscheme = { "tokyonight" },
-  }, 
-  change_detection = {
-    notify = false,
-  },
+require("lazy").setup({ { import = "user.plugins" }, { import = "user.plugins.lsp" } }, {
+	change_detection = {
+		notify = false,
+	},
 })

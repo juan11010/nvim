@@ -6,7 +6,7 @@ local opts = { silent = true }
 vim.g.mapleader = " "
 
 keymap("n", "<leader>pv", vim.cmd.Ex, opts)
-keymap("i", "jk", "<ESC>", opts)
+keymap("i", "<C-c>", "<ESC>", opts)
 
 keymap("v", "J", ":m '>+1<CR>gv=gv")
 keymap("v", "K", ":m '<-2<CR>gv=gv")
