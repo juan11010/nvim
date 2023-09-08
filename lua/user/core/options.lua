@@ -1,6 +1,6 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
-vim.opt.mouse = "a"
+-- vim.opt.mouse = "a"
 
 -- Tabs and indentention
 vim.opt.tabstop = 2
