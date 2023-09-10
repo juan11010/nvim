@@ -1,19 +1,22 @@
 return {
 	{
-		"folke/tokyonight.nvim",
+		"catppuccin/nvim",
+		name = "catppuccin",
 		lazy = false,
 		priority = 1000,
 		config = function()
-      local tokyonight = require("tokyonight")
+			local catppuccin = require("catppuccin")
 
-      tokyonight.setup({
-        transparent = true,
-        styles = {
-          floats = "transparent",
-        }
-      })
-
-			vim.cmd("colorscheme tokyonight-night")
+			catppuccin.setup({
+				transparent_background = true,
+				integrations = {
+					harpoon = true,
+					telescope = {
+						enabled = true,
+					},
+				},
+			})
+			vim.cmd("colorscheme catppuccin-mocha")
 		end,
 	},
 }
