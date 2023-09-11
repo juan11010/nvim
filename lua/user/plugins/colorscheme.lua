@@ -1,3 +1,4 @@
+-- this a test
 return {
 	{
 		"catppuccin/nvim",
