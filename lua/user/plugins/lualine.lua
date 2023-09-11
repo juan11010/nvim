@@ -8,6 +8,13 @@ return {
 			return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 		end
 
+		local filename = {
+			"filename",
+			file_status = true,
+			newfile_status = true,
+			path = 1,
+		}
+
 		lualine.setup({
 			options = {
 				icons_enabled = true,
@@ -32,7 +39,7 @@ return {
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { "filename" },
+				lualine_c = { filename },
 				lualine_x = { spaces, "encoding", "filetype" },
 				lualine_y = { "progress" },
 				lualine_z = { "location" },
