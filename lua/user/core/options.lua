@@ -3,10 +3,10 @@ vim.opt.relativenumber = true
 -- vim.opt.mouse = "a"
 
 -- Tabs and indentention
--- vim.opt.tabstop = 2
--- vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.autoindent = true
+-- vim.o.tabstop = 4
+-- vim.o.shiftwidth = 4
+-- vim.o.autoindent = true
+vim.o.expandtab = true
 vim.o.breakindent = true
 
 -- Search
