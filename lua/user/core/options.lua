@@ -17,7 +17,7 @@ vim.opt.smartcase = true
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 
--- vim.opt.wrap = false -- line wrap
+vim.opt.wrap = false -- line wrap
 vim.opt.cursorline = true -- curosor line
 vim.opt.swapfile = false -- turn off swap files
 vim.opt.backup = false -- turn off backup files
