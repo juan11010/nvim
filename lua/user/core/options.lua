@@ -28,3 +28,4 @@ vim.opt.scrolloff = 8 -- scroll offset
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.backspace = "indent,eol,start" -- backspace
+vim.opt.showmode = false
