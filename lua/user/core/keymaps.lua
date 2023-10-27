@@ -8,10 +8,7 @@ vim.g.maplocalleader = ","
 
 -- Netrw Settings
 vim.g.netrw_banner = 0
-vim.g.netrw_browser_split = 4
-vim.g.netrw_altv = 1
-vim.g.netrw_liststyle = 3
-keymap("n", "<leader>pv", ":25Lex<CR>", opts)
+keymap("n", "<leader>pv", vim.cmd.Ex, opts)
 
 keymap("i", "<C-c>", "<ESC>", opts)
 
