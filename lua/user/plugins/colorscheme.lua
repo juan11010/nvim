@@ -1,16 +1,18 @@
 -- this a test
 return {
     {
-        "folke/tokyonight.nvim",
+        "rose-pine/neovim",
+        name = "rose-pine",
         lazy = false,
         priority = 1000,
         config = function()
-            local tokyonight = require("tokyonight")
+            local rose_pine = require("rose-pine")
 
-            tokyonight.setup({
-                transparent = true,
+            rose_pine.setup({
+                disable_background = true,
+                disable_float_background = true,
             })
-            vim.cmd("colorscheme tokyonight-night")
+            vim.cmd("colorscheme rose-pine")
         end,
     },
 }

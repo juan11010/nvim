@@ -4,8 +4,15 @@ local keymap = vim.keymap.set
 local opts = { silent = true }
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
-keymap("n", "<leader>pv", vim.cmd.Ex, opts)
+-- Netrw Settings
+vim.g.netrw_banner = 0
+vim.g.netrw_browser_split = 4
+vim.g.netrw_altv = 1
+vim.g.netrw_liststyle = 3
+keymap("n", "<leader>pv", ":25Lex<CR>", opts)
+
 keymap("i", "<C-c>", "<ESC>", opts)
 
 keymap("v", "J", ":m '>+1<CR>gv=gv")
