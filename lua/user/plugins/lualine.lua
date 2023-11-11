@@ -1,8 +1,5 @@
 return {
     "nvim-lualine/lualine.nvim",
-    dependencies = {
-        "nvim-tree/nvim-web-devicons",
-    },
     config = function()
         local lualine = require("lualine")
 
@@ -19,11 +16,6 @@ return {
         local diff = {
             "diff",
             symbols = { added = " ", modified = " ", removed = " " },
-        }
-
-        local filetype = {
-            "filetype",
-            icon_only = true,
         }
 
         lualine.setup({
@@ -48,7 +40,7 @@ return {
             sections = {
                 lualine_a = { "mode" },
                 lualine_b = { "branch" },
-                lualine_c = { filename, filetype, diagnostics },
+                lualine_c = { filename, diagnostics },
                 lualine_x = { diff },
                 lualine_y = { "progress" },
                 lualine_z = { "location" },
