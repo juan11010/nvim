@@ -16,7 +16,9 @@ keymap("i", "<C-c>", "<ESC>", opts)
 keymap("v", "J", ":m '>+1<CR>gv=gv")
 keymap("v", "K", ":m '<-2<CR>gv=gv")
 
-keymap("x", "<leader>p", [["_dP]])
+-- better paste
+keymap("x", "p", [["_dP]])
+
 keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
 keymap("n", "n", "nzzzv")
