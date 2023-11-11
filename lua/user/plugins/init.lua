@@ -6,4 +6,8 @@ return {
     "tpope/vim-sleuth",
     "tpope/vim-surround",
     "nvim-treesitter/nvim-treesitter-context",
+    {
+        "stevearc/dressing.nvim",
+        opts = {},
+    },
 }

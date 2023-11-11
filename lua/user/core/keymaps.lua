@@ -8,7 +8,8 @@ vim.g.maplocalleader = ","
 
 -- Netrw Settings
 vim.g.netrw_banner = 0
-keymap("n", "<leader>pv", vim.cmd.Ex, opts)
+-- keymap("n", "<leader>pv", vim.cmd.Ex, opts)
+keymap("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 keymap("i", "<C-c>", "<ESC>", opts)
 
