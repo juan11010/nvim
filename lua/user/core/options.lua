@@ -36,5 +36,3 @@ vim.opt.updatetime = 50
 vim.opt.backspace = "indent,eol,start" -- backspace
 vim.opt.showmode = false
 vim.opt.hlsearch = false
-vim.opt.spell = true
-vim.opt.spelllang = "en_us"
