@@ -5,7 +5,6 @@ return {
 
         local filename = {
             "filename",
-            path = 1,
         }
 
         local diagnostics = {
