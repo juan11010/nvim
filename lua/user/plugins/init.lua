@@ -1,5 +1,8 @@
 return {
-    "nvim-lua/plenary.nvim",
+    {
+        "nvim-lua/plenary.nvim",
+        name = "plenary",
+    },
     "github/copilot.vim",
     "mbbill/undotree",
     "tpope/vim-fugitive",
