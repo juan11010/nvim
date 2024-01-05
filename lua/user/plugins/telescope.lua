@@ -17,5 +17,13 @@ return {
         keymap("n", "<leader>pf", builtin.find_files, {})
         keymap("n", "<leader>ps", builtin.live_grep, {})
         keymap("n", "<leader>fh", builtin.help_tags, {})
+        keymap("n", "<leader>pws", function()
+            local word = vim.fn.expand("<cword>")
+            builtin.grep_string({ search = word })
+        end, {})
+        keymap("n", "<leader>pWs", function()
+            local word = vim.fn.expand("<cWORD>")
+            builtin.grep_string({ search = word })
+        end, {})
     end,
 }
