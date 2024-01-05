@@ -4,7 +4,7 @@ return {
     "mbbill/undotree",
     "tpope/vim-fugitive",
     "tpope/vim-sleuth",
-    "tpope/vim-surround",
+    -- "tpope/vim-surround",
     "nvim-treesitter/nvim-treesitter-context",
     {
         "NvChad/nvim-colorizer.lua",
