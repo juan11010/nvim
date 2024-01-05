@@ -46,7 +46,7 @@ return {
                 { name = "luasnip" }, -- snippets
                 { name = "buffer" }, -- text within current buffer
                 { name = "path" }, -- file system paths
-                { name = "nvim_lua" },
+                { name = "nvim_lua" }, -- lua api completions
             }),
         })
     end,

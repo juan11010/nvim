@@ -3,6 +3,7 @@ return {
     branch = "0.1.x",
     config = function()
         local telescope = require("telescope")
+        local builtin = require("telescope.builtin")
 
         telescope.setup({
             defaults = {
@@ -11,11 +12,10 @@ return {
         })
 
         -- set keymaps
-        local keymap = vim.keymap -- for conciseness
-
-        keymap.set("n", "<C-p>", "<cmd>Telescope git_files<cr>")
-        keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
-        keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
-        keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
+        local keymap = vim.keymap.set -- for conciseness
+        keymap("n", "<C-p>", builtin.git_files, {})
+        keymap("n", "<leader>pf", builtin.find_files, {})
+        keymap("n", "<leader>ps", builtin.live_grep, {})
+        keymap("n", "<leader>fh", builtin.help_tags, {})
     end,
 }
