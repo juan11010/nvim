@@ -3,7 +3,6 @@ return {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         event = { "BufReadPre", "BufNewFile" },
-        dependencies = { "windwp/nvim-ts-autotag" },
         config = function()
             -- import nvim-treesitter plugin
             local treesitter = require("nvim-treesitter.configs")
@@ -17,9 +16,6 @@ return {
 
                 -- enable indentation
                 indent = { enable = true },
-
-                -- autotags
-                autotag = { enable = true },
 
                 -- ensure these language parsers are installed
                 ensure_installed = {
@@ -41,6 +37,7 @@ return {
                     "dockerfile",
                     "gitignore",
                 },
+
                 incremental_selection = {
                     enable = true,
                     keymaps = {
