@@ -1,7 +1,5 @@
 return {
     "nvimtools/none-ls.nvim",
-    -- lazy = true,
-    event = { "BufReadPre", "BufNewFile" },
     config = function()
         local null_ls = require("null-ls")
         local formatting = null_ls.builtins.formatting
@@ -17,19 +15,22 @@ return {
                 -- Diagnostics
                 diagnostics.codespell,
                 diagnostics.eslint_d.with({
-                    condition = function (utils)
+                    condition = function(utils)
                         return utils.root_has_file(".eslintrc.js", ".eslintrc.cjs")
-                    end
+                    end,
                 }),
 
                 -- Code actions
                 code_actions.eslint_d.with({
-                    condition = function (utils)
+                    condition = function(utils)
                         return utils.root_has_file(".eslintrc.js", ".eslintrc.cjs")
-                    end
+                    end,
                 }),
             },
         })
-        vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, {})
+
+        vim.keymap.set("n", "<space>lf", function()
+            vim.lsp.buf.format({ async = true })
+        end, {})
     end,
 }
