@@ -23,7 +23,7 @@ vim.opt.signcolumn = "yes"
 
 -- misc
 vim.opt.wrap = false -- line wrap
-vim.opt.cursorline = true -- cursor line
+vim.opt.cursorline = false -- cursor line
 vim.opt.swapfile = false -- turn off swap files
 vim.opt.backup = false -- turn off backup files
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- undo files
