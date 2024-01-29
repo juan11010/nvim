@@ -3,10 +3,6 @@ return {
     config = function()
         local lualine = require("lualine")
 
-        local filename = {
-            "filename",
-        }
-
         local diagnostics = {
             "diagnostics",
             sections = { "error", "warn" },
@@ -39,7 +35,7 @@ return {
             sections = {
                 lualine_a = { "mode" },
                 lualine_b = { "branch" },
-                lualine_c = { filename, diagnostics },
+                lualine_c = { "filename", diagnostics },
                 lualine_x = { diff },
                 lualine_y = { "progress" },
                 lualine_z = { "location" },
