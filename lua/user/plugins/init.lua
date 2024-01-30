@@ -8,8 +8,4 @@ return {
     "tpope/vim-fugitive",
     "tpope/vim-sleuth",
     "nvim-treesitter/nvim-treesitter-context",
-    {
-        "lewis6991/gitsigns.nvim",
-        config = true,
-    },
 }
