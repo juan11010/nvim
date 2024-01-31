@@ -1,5 +1,6 @@
 return {
     "neovim/nvim-lspconfig",
+    event = { "BufReadPost", "BufWritePost", "BufNewFile" },
     dependencies = {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
@@ -63,8 +64,8 @@ return {
                 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
                 -- vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
                 vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts) -- show diagnostics for line
-                vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
-                vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+                vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)  -- jump to previous diagnostic in buffer
+                vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)  -- jump to next diagnostic in buffer
             end,
         })
     end,
