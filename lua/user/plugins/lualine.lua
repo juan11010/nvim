@@ -7,19 +7,12 @@ return {
         local diagnostics = {
             "diagnostics",
             sections = { "error", "warn" },
-        }
-
-        local diff = {
-            "diff",
-            symbols = { added = " ", modified = " ", removed = " " },
+            symbols = { error = "E:", warn = "W:", info = "I:", hint = "H:" },
         }
 
         lualine.setup({
             options = {
-                icons_enabled = true,
                 theme = "auto",
-                component_separators = { left = "", right = "" },
-                section_separators = { left = "", right = "" },
                 disabled_filetypes = {
                     statusline = {},
                     winbar = {},
@@ -37,7 +30,7 @@ return {
                 lualine_a = { "mode" },
                 lualine_b = { "branch" },
                 lualine_c = { "filename", diagnostics },
-                lualine_x = { diff },
+                lualine_x = { "diff" },
                 lualine_y = { "progress" },
                 lualine_z = { "location" },
             },
