@@ -7,8 +7,8 @@ vim.g.mapleader = " "
 
 -- Netrw Settings
 vim.g.netrw_banner = 0
-keymap("n", "<leader>pv", vim.cmd.Ex, opts)
--- keymap("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+-- keymap("n", "<leader>pv", vim.cmd.Ex, opts)
+keymap("n", "<leader>pv", "<CMD>Oil<CR>", opts)
 
 keymap("i", "<C-c>", "<ESC>", opts)
 
@@ -41,3 +41,9 @@ keymap("v", "<leader>d", [["_d"]])
 -- undo tree and fugitive
 keymap("n", "<leader>u", vim.cmd.UndotreeToggle)
 keymap("n", "<leader>gs", vim.cmd.Git)
+
+-- resize splits
+keymap("n", "<M-,>", "<C-w>5<")
+keymap("n", "<M-.>", "<C-w>5>")
+keymap("n", "<M-t>", "<C-w>+")
+keymap("n", "<M-s>", "<C-w>-")
