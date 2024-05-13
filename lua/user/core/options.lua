@@ -16,6 +16,7 @@ vim.opt.smartcase = true
 -- appearance
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
+vim.opt.guicursor = ""
 
 -- splits
 -- vim.opt.splitbelow = true

@@ -10,6 +10,11 @@ return {
             symbols = { error = "E:", warn = "W:", info = "I:", hint = "H:" },
         }
 
+        local filename = {
+            "filename",
+            path = 1,
+        }
+
         lualine.setup({
             options = {
                 theme = "auto",
@@ -29,7 +34,7 @@ return {
             sections = {
                 lualine_a = { "mode" },
                 lualine_b = { "branch" },
-                lualine_c = { "filename", diagnostics },
+                lualine_c = { filename , diagnostics },
                 lualine_x = { "diff" },
                 lualine_y = { "progress" },
                 lualine_z = { "location" },
