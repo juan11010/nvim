@@ -23,13 +23,25 @@ return {
             completion = {
                 completeopt = "menu,menuone,preview,noselect",
             },
-            window = {
-                completion = cmp.config.window.bordered(),
-                documentation = cmp.config.window.bordered(),
+            sources = {
+                { name = "nvim_lsp" }, -- lsp
+                { name = "luasnip" }, -- snippets
+                { name = "buffer" }, -- text within current buffer
+                { name = "path" }, -- file system paths
+            },
+            mapping = {
+                ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }), -- previous suggestion
+                ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }), -- next suggestion
+                ["<C-y>"] = cmp.mapping(
+                    cmp.mapping.confirm({
+                        behavior = cmp.ConfirmBehavior.Insert,
+                        select = true,
+                    }),
+                    { "i", "c" }
+                ),
             },
             formatting = {
                 format = lspkind.cmp_format({
-                    -- mode = "symbol_text",
                     maxwidth = 50,
                     ellipsis_char = "...",
                 }),
@@ -39,22 +51,18 @@ return {
                     luasnip.lsp_expand(args.body)
                 end,
             },
-            mapping = cmp.mapping.preset.insert({
-                ["<C-p>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-                ["<C-n>"] = cmp.mapping.select_next_item(), -- next suggestion
-                ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-                ["<C-f>"] = cmp.mapping.scroll_docs(4),
-                ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
-                ["<C-e>"] = cmp.mapping.abort(),        -- close completion window
-                ["<CR>"] = cmp.mapping.confirm({ select = false }),
-            }),
-            -- sources for autocompletion
-            sources = cmp.config.sources({
-                { name = "nvim_lsp" }, -- lsp
-                { name = "luasnip" },  -- snippets
-                { name = "buffer" },   -- text within current buffer
-                { name = "path" },     -- file system paths
-            }),
         })
+
+        vim.keymap.set({ "i", "s" }, "<C-k>", function()
+            if luasnip.expand_or_jumpable() then
+                luasnip.expand_or_jump()
+            end
+        end, { silent = true })
+
+        vim.keymap.set({ "i", "s" }, "<C-j>", function()
+            if luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+            end
+        end, { silent = true })
     end,
 }
