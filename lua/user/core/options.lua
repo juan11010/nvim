@@ -1,6 +1,5 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
--- vim.opt.mouse = "a"
 
 -- Tabs and indentention
 vim.opt.tabstop = 4
@@ -16,11 +15,6 @@ vim.opt.smartcase = true
 -- appearance
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
-vim.opt.guicursor = ""
-
--- splits
--- vim.opt.splitbelow = true
--- vim.opt.splitright = true
 
 -- misc
 vim.opt.wrap = false -- line wrap
