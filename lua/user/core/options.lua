@@ -15,6 +15,7 @@ vim.opt.smartcase = true
 -- appearance
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
+-- vim.opt.guicursor = ""
 
 -- misc
 vim.opt.wrap = false -- line wrap
