@@ -1,10 +1,5 @@
 return {
     {
-        "nvim-lua/plenary.nvim",
-        name = "plenary",
-        lazy = true,
-    },
-    {
         "nvim-treesitter/nvim-treesitter-context",
         event = { "BufReadPost", "BufWritePost", "BufNewFile" },
         enabled = true,
