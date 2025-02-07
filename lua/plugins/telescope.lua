@@ -11,5 +11,10 @@ return {
     vim.keymap.set("n", "<leader>pf", builtin.find_files, { desc = "Telescope find files" })
     vim.keymap.set("n", "<leader>ps", builtin.live_grep, { desc = "Telescope live grep" })
     vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+    vim.keymap.set("n", "<leader>en", function()
+      builtin.find_files({
+        cwd = vim.fn.stdpath("config"),
+      })
+    end)
   end,
 }
