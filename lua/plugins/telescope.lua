@@ -4,10 +4,28 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-    { "echasnovski/mini.icons", opts = {} },
   },
   config = function()
+    local telescope = require("telescope")
     local builtin = require("telescope.builtin")
+
+    telescope.setup({
+      pickers = {
+        find_files = {
+          theme = "ivy",
+        },
+        git_files = {
+          theme = "ivy",
+        },
+      },
+      extensions = {
+        fzf = {},
+      },
+    })
+
+    require("telescope").load_extension("fzf")
+
+    vim.keymap.set("n", "<C-p>", builtin.git_files, { desc = "Telescope find git files" })
     vim.keymap.set("n", "<leader>pf", builtin.find_files, { desc = "Telescope find files" })
     vim.keymap.set("n", "<leader>ps", builtin.live_grep, { desc = "Telescope live grep" })
     vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
