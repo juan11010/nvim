@@ -2,8 +2,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.g.snacks_animate = true
-
 -- Options
 local opt = vim.opt
 
