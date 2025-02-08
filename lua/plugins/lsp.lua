@@ -7,12 +7,12 @@ return {
   },
   config = function()
     local mason_lspconfig = require("mason-lspconfig")
-    local config = require("lspconfig")
+    local lspconfig = require("lspconfig")
 
     mason_lspconfig.setup({
       ensure_installed = {
         "lua_ls",
-        "ts_ls",
+        "vtsls",
         "emmet_language_server",
         "tailwindcss",
         "html",
@@ -43,12 +43,12 @@ return {
     -- Servers
     require("mason-lspconfig").setup_handlers({
       function(server_name)
-        config[server_name].setup({})
+        lspconfig[server_name].setup({})
       end,
 
       -- Server configs
       ["lua_ls"] = function()
-        config["lua_ls"].setup({
+        lspconfig["lua_ls"].setup({
           settings = {
             Lua = {
               workspace = {
