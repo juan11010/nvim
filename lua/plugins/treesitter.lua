@@ -3,7 +3,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     version = false,
     build = ":TSUpdate",
-    event = { "BufReadPost", "BufWritePost", "BufNewFile", "VeryLazy" },
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       local treesitter = require("nvim-treesitter.configs")
 
@@ -50,12 +50,12 @@ return {
   },
   {
     "windwp/nvim-ts-autotag",
-    event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+    event = { "VeryLazy" },
     opts = {},
   },
   {
     "nvim-treesitter/nvim-treesitter-context",
-    event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+    event = { "VeryLazy" },
     enabled = true,
     opts = { mode = "cursor", max_lines = 3 },
   },

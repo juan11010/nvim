@@ -1,5 +1,7 @@
 return {
   "stevearc/oil.nvim",
+  lazy = false,
+  dependencies = { { "echasnovski/mini.icons", opts = {} } },
   ---@module 'oil'
   ---@type oil.SetupOpts
   opts = {
@@ -21,9 +23,6 @@ return {
       ["g."] = { "actions.toggle_hidden", mode = "n" },
       ["g\\"] = { "actions.toggle_trash", mode = "n" },
     },
-    -- Set to false to disable all of the above keymaps
     use_default_keymaps = false,
   },
-  dependencies = { { "echasnovski/mini.icons", opts = {} } },
-  lazy = false,
 }

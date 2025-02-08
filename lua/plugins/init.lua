@@ -4,5 +4,5 @@ return {
     event = "VeryLazy",
     opts = {},
   },
-  { "nvim-lua/plenary.nvim", lazy = true },
+  { "nvim-lua/plenary.nvim" },
 }
