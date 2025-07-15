@@ -1,5 +1,6 @@
 return {
   "folke/snacks.nvim",
+  priority = 1000,
   lazy = false,
   ---@type snacks.Config
   opts = {
@@ -10,28 +11,6 @@ return {
     quickfile = { enabled = true },
     scope = { enabled = true },
     statuscolumn = { enabled = true },
-  },
-  keys = {
-    {
-      "<leader>lg",
-      function()
-        Snacks.lazygit()
-      end,
-      desc = "Lazygit",
-    },
-    {
-      "<leader>gl",
-      function()
-        Snacks.picker.git_log()
-      end,
-      desc = "Git Log",
-    },
-    {
-      "<leader>gf",
-      function()
-        Snacks.picker.git_log_file()
-      end,
-      desc = "Git Log File",
-    },
+    words = { enabled = true },
   },
 }

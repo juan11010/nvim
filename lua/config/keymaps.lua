@@ -34,7 +34,7 @@ map("v", "<leader>d", [["_d"]])
 
 -- undo tree and fugitive
 -- map("n", "<leader>u", vim.cmd.UndotreeToggle)
--- map("n", "<leader>gs", vim.cmd.Git)
+map("n", "<leader>gs", vim.cmd.Git)
 
 -- Resize window using <ctrl> arrow keys
 map("n", "<C-Up>", "<cmd>resize +2<cr>")
