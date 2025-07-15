@@ -1,80 +1,19 @@
 return {
-  "neovim/nvim-lspconfig",
-  event = { "BufReadPre", "BufNewFile" },
+  "mason-org/mason-lspconfig.nvim",
   dependencies = {
-    { "williamboman/mason.nvim", opts = {} },
-    "williamboman/mason-lspconfig.nvim",
+    { "mason-org/mason.nvim", opts = {} },
+    "neovim/nvim-lspconfig",
   },
-  config = function()
-    local mason_lspconfig = require("mason-lspconfig")
-    local lspconfig = require("lspconfig")
-
-    mason_lspconfig.setup({
-      ensure_installed = {
-        "lua_ls",
-        "vtsls",
-        "emmet_language_server",
-        "tailwindcss",
-        "html",
-        "cssls",
-        "astro",
-        "eslint",
-      },
-    })
-
-    -- keymaps
-    vim.api.nvim_create_autocmd("LspAttach", {
-      callback = function(ev)
-        local opts = { buffer = ev.buf }
-        vim.keymap.set("n", "grr", vim.lsp.buf.references, opts)
-        vim.keymap.set("n", "<space>nn", vim.lsp.buf.rename, opts)
-        vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
-        vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-        vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
-        vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
-        vim.keymap.set("n", "<leader>ih", function()
-          vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
-        end, opts)
-      end,
-    })
-
-    -- Servers
-    require("mason-lspconfig").setup_handlers({
-      function(server_name)
-        lspconfig[server_name].setup({})
-      end,
-
-      -- Server configs
-      ["lua_ls"] = function()
-        lspconfig["lua_ls"].setup({
-          settings = {
-            Lua = {
-              workspace = {
-                checkThirdParty = false,
-              },
-              codeLens = {
-                enable = true,
-              },
-              completion = {
-                callSnippet = "Replace",
-              },
-              doc = {
-                privateName = { "^_" },
-              },
-              hint = {
-                enable = true,
-                setType = false,
-                paramType = true,
-                paramName = "Disable",
-                semicolon = "Disable",
-                arrayIndex = "Disable",
-              },
-            },
-          },
-        })
-      end,
-    })
-  end,
+  opts = {
+    ensure_installed = {
+      "lua_ls",
+      "vtsls",
+      "emmet_language_server",
+      "tailwindcss",
+      "html",
+      "cssls",
+      "astro",
+      "eslint",
+    },
+  },
 }
