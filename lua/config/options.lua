@@ -1,7 +1,3 @@
-vim.diagnostic.config({
-  virtual_text = true,
-})
-
 -- Options
 vim.opt.cursorline = true
 vim.opt.expandtab = true
@@ -41,3 +37,4 @@ vim.opt.backup = false -- turn off backup files
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- undo files
 vim.opt.incsearch = true -- incremental search
 vim.opt.isfname:append("@-@")
+vim.opt.winborder = "rounded"
