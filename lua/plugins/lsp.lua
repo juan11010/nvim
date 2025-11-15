@@ -14,6 +14,7 @@ return {
       "cssls",
       "astro",
       "eslint",
+      "jsonls",
     },
   },
 }
